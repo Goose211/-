@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>タイトル</title>
+</head>
+<body>
+  <div>
+    <% if !@musics.empty? %>
+      <div>
+        <% @musics.each do |music| %>
+          <div>
+            <img src="<%= music["artworkUrl100] %>">
+            <p><%= music["artistName"] %></p>
+            <p><%= music["collectionName"] %></p>
+            <p><%= music["trackName"] %></p>
+            <a href="<%= music["previewUrl"] %>">サンプル</a>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</body>
+</html>
